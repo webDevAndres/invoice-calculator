@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Total calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="calcValue.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <main id="main_content">
+            <div class="row">
+                <div class="col text-center">
+                    <h1>Invoice Total Calculator</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <label for="type">Customer Type:</label>
+                </div>
+                <div class="col-3">
+                    <select id="type" class="form-select" aria-label=".form-select-sm example">
+                        <option value="r" selected>Regular</option>
+                        <option value="l">Loyalty Program</option>
+                        <option value="h">Honored Citizen</option>
+                    </select> <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <label for="subtotal">Invoice Subtotal:</label>
+                </div>
+                <div class="col">
+                    <input type="text" name="subtotal" id="subtotal">
+                </div>
+            </div>
+            <hr class="dotted">
+            <div class="row">
+                <div class="col-3">
+                    <label for="percent">Discount Percent:</label>
+                </div>
+                <div class="col">
+                    <input type="text" name="percent" id="percent" disabled>%
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <label for="discount">Discount Amount:</label>
+                </div>
+                <div class="col">
+                    <input type="text" name="discount" id="discount" disabled>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <label for="invoice">invoice:</label>
+                </div>
+                <div class="col">
+                    <input type="text" name="invoice" id="invoice" disabled>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col offset-3">
+                    <button type="button" id="calculate_value" class="btn btn-primary">Calculate</button>
+                    <p id="date"></p>
+                </div>
+            </div>
+            
+
+        </main>
+    </div>
+</body>
+
+</html>
